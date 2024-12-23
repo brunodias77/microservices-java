@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888  # Importa configurações do Config Server hospedado no endereço especificado.
+      # A palavra-chave "optional" indica que a aplicação continuará funcionando
+    # mesmo que o Config Server não esteja disponível.
+  application:
+    name: discovery-service  # Define o nome da aplicação. Isso é usado principalmente para identificação no ecossistema Spring Cloud.
+    # Nesse caso, o nome da aplicação é "discovery-service".
+
+

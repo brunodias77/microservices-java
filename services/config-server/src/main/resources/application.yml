@@ -1,0 +1,18 @@
+server:
+  port: 8888  # Define a porta em que o servidor irá escutar. Neste caso, o servidor estará disponível na porta 8888.
+
+spring:
+  profiles:
+    active: native  # Ativa o perfil "native". Esse perfil é utilizado para carregar configurações localmente, em vez de buscar em um repositório remoto (como Git).
+
+  application:
+    name: config-server  # Nome da aplicação. Usado principalmente para identificação no contexto do Spring Cloud.
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations  # Especifica o local onde os arquivos de configuração estão armazenados.
+          # Neste caso, os arquivos estão na pasta "configurations" dentro do classpath do aplicativo.
+
+
